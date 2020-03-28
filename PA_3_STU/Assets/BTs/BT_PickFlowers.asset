@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: BT_PickFlowers
+  m_EditorClassIdentifier: 
+  brickName: Assets/BTs/BT_PickFlowers.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"801776f298b9f31469d892b6fc0bf118\" nextId=\"17\">\r\n      <root>\r\n       
+    <SequenceNode id=\"1\" />\r\n      </root>\r\n      <inputParams />\r\n     
+    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"flower\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" />\r\n        </outputValues>\r\n     
+    </outputParams>\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <SequenceNode
+    id=\"1\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode id=\"5\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"4\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"14\" />\r\n        </elem>\r\n     
+    </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SequenceNode>\r\n    <ActionNode id=\"5\" action=\"GameObject/Destroy\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"game object\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"flower\" />\r\n       
+    </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"4\" action=\"MyActions/Arrive\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"flower\" />\r\n          <entry name=\"closeEnough\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"5\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"14\" action=\"MyActions/Count flower\">\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"BT_PickFlowers\"
+    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
+    <elem>\r\n          <SequenceNode id=\"1\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"4\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"8\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <PrioritySelectorNode id=\"11\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode id=\"12\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode id=\"13\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"14\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <RepeatDecorator id=\"16\" />\r\n       
+    </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <SequenceNode id=\"1\" />\r\n          <ConditionEvalNode id=\"12\" />\r\n         
+    <ActionNode id=\"4\" />\r\n          <ActionNode id=\"5\" />\r\n          <ActionNode
+    id=\"8\" />\r\n          <PrioritySelectorNode id=\"11\" />\r\n          <ConditionEvalNode
+    id=\"13\" />\r\n          <ActionNode id=\"14\" />\r\n          <RepeatDecorator
+    id=\"16\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <SequenceNode id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"338.1823 551.8572\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
+    <ActionNode id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"238.8491 755.5241\" name=\"GameObject/Destroy\" description=\"Destroys
+    the gameobject\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"1\" />\r\n          <SequenceNode id=\"1\" />\r\n          <SequenceNode
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"412.7379 764.5241\" name=\"MyActions/Arrive\" description=\"Goes to
+    (ARRIVES) a specified location (target)\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"1\" />\r\n          <SequenceNode id=\"1\" />\r\n         
+    <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"14\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"554.1829 774.8574\" name=\"MyActions/Count flower\" description=\"Count
+    flower for bouquet. Use agent's own blackboard\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"1\" />\r\n          <ActionNode id=\"14\" />\r\n         
+    <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 
+    </editorInfo>\r\n  <runtimeInfo>\r\n    <ActionNode id=\"8\" action=\"MyActions/Wander
+    Around\">\r\n      <inputParams>\r\n        <inputValues>\r\n          <entry
+    name=\"attractor\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\" />\r\n         
+    <entry name=\"seek weight\" type=\"System.Single\" isBlackboard=\"False\" value=\"0\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <PrioritySelectorNode id=\"11\">\r\n     
+    <children>\r\n        <elem>\r\n          <GuardAndNode>\r\n            <guard>\r\n             
+    <ConditionEvalNode id=\"12\" />\r\n            </guard>\r\n            <child>\r\n             
+    <SequenceNode id=\"1\" />\r\n            </child>\r\n          </GuardAndNode>\r\n       
+    </elem>\r\n        <elem>\r\n          <GuardAndNode>\r\n            <guard>\r\n             
+    <ConditionEvalNode id=\"13\" />\r\n            </guard>\r\n            <child>\r\n             
+    <ActionNode id=\"8\" />\r\n            </child>\r\n          </GuardAndNode>\r\n       
+    </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode
+    id=\"12\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"MyConditions/FindInstanceOfFlower\">\r\n     
+    <inputParams />\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"the flower found\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"flower\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </ConditionEvalNode>\r\n    <ConditionEvalNode id=\"13\"
+    policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"AlwaysTrue\">\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <RepeatDecorator id=\"16\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n     
+    <child>\r\n        <PrioritySelectorNode id=\"11\" />\r\n      </child>\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n   
+    <BehaviorTree id=\"1\" nextId=\"1\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </BehaviorTree>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n   
+    <ActionNode id=\"8\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"859.7384 430.3016\" name=\"MyActions/Wander Around\" description=\"Wanders
+    around an attractor\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"8\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <PrioritySelectorNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"554.1829 363.8569\" name=\"Priority Selector\"
+    description=\"\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <RepeatDecorator id=\"16\" />\r\n          <RepeatDecorator
+    id=\"16\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
+    <ConditionEvalNode id=\"12\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"338.1823 551.8572\" name=\"MyConditions/FindInstanceOfFlower\"
+    description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <PrioritySelectorNode id=\"11\" />\r\n          <PrioritySelectorNode
+    id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
+    <ConditionEvalNode id=\"13\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"859.7384 430.3016\" name=\"AlwaysTrue\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <PrioritySelectorNode id=\"11\" />\r\n          <PrioritySelectorNode id=\"11\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <RepeatDecorator
+    id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"617.9684 198.8572\" name=\"Repeat\" description=\"Repeats the execution
+    of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <RepeatDecorator id=\"16\" />\r\n        </data>\r\n     
+    </_data>\r\n    </RepeatDecorator>\r\n    <BehaviorTree id=\"1\" _removeIfClosed=\"False\">\r\n     
+    <_rootList />\r\n      <_nodes>\r\n        <nodes />\r\n      </_nodes>\r\n   
+    </BehaviorTree>\r\n  </editorInfo>\r\n  <runtimeInfo>\r\n    <BehaviorTree id=\"8\"
+    nextId=\"1\">\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </BehaviorTree>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree
+    id=\"8\" _removeIfClosed=\"False\">\r\n      <_rootList />\r\n      <_nodes>\r\n       
+    <nodes />\r\n      </_nodes>\r\n    </BehaviorTree>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.9
+  subslist: []
+  _guid: 801776f298b9f31469d892b6fc0bf118

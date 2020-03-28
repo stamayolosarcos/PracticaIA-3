@@ -13,6 +13,12 @@ public class BOB_Blackboard : MonoBehaviour {
     public float thirstThreshold = 100;
     public int enoughFlowers = 30;
     public int flowers = 0;
+    public int findObjectRadius = 100;
+
+    public GameObject boxArea;
+    public GameObject warehouse;
+    public GameObject park;
+    public GameObject dasys;
 
     private TextMesh pocketLine;
     private TextMesh accountLine;
@@ -52,6 +58,16 @@ public class BOB_Blackboard : MonoBehaviour {
     public bool HasMoneyToBuyBeer ()
     {
         return moneyInPocket >= priceOfBeer;
+    }
+    public bool HasMoneyInAccount()
+    {
+        return moneyInAccount >= withdrawalAmmount;
+    }
+
+    public GameObject FindInstanceOfFlower()
+    {
+        GameObject flower = SensingUtils.FindInstanceWithinRadius(gameObject, "FLOWER", findObjectRadius);
+        return flower;
     }
 
     public bool BuyBeer()

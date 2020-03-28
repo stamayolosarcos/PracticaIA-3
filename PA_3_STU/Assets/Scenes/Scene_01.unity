@@ -14248,6 +14248,7 @@ GameObject:
   - component: {fileID: 1101422856}
   - component: {fileID: 1101422855}
   - component: {fileID: 1101422853}
+  - component: {fileID: 1101422860}
   - component: {fileID: 1101422852}
   - component: {fileID: 1101422857}
   - component: {fileID: 1101422858}
@@ -14310,7 +14311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTasksPerTick: 1000
-  behavior: {fileID: 0}
+  behavior: {fileID: 11400000, guid: 7ab3978edfa64984a9b608fcfbd4c260, type: 2}
   paused: 0
   restartWhenFinished: 0
   blackboard:
@@ -14440,17 +14441,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27917633a378abd4a885119f9b0c7bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyInPocket: 0
+  moneyInPocket: 10
   moneyInAccount: 10
   withdrawalAmmount: 20
   salary: 20
   priceOfBeer: 10
-  thirstReductionPerBeer: 75
-  thirst: 70
-  thirstIncrementPerSecond: 1
+  thirstReductionPerBeer: 85
+  thirst: 80
+  thirstIncrementPerSecond: 1.7
   thirstThreshold: 100
-  enoughFlowers: 30
+  enoughFlowers: 40
   flowers: 0
+  findObjectRadius: 100
+  boxArea: {fileID: 2101653405}
+  warehouse: {fileID: 29869457}
+  park: {fileID: 1987129007}
+  dasys: {fileID: 449960112}
 --- !u!114 &1101422858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14565,6 +14571,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1101422860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101422851}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85784b99cb4cef9429cde2fae29aea2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  arrivedToTarget: 5
+  boxesDelivered: 0
 --- !u!1 &1122527166
 GameObject:
   m_ObjectHideFlags: 0
